@@ -27,7 +27,7 @@
                                         <th scope="col">Sex</th>
                                         <th scope="col">Date of birth</th>
                                         <th scope="col">Subcity</th>
-                                        <th scope="col">Kebele ID</th>
+                                        <th scope="col">unit ID</th>
                                         <th scope="col">House NO</th>
                                         <th scope="col">Religion</th>
                                         <th scope="col">Email</th>
@@ -67,7 +67,7 @@
                                             <td><?php printf( "%s", $person['sex'] );?></td>
                                             <td><?php printf( "%s", $person['age'] );?></td>
                                             <td><?php printf( "%s", $person['subcity'] );?></td>
-                                            <td><?php printf( "%s", $person['kebele_id'] );?></td>
+                                            <td><?php printf( "%s", $person['unit_id'] );?></td>
                                             <td><?php printf( "%s", $person['house_id'] );?></td>
                                             <td><?php printf( "%s", $person['religion'] );?></td>
                                             <td><?php printf( "%s", $person['email'] );?></td>
@@ -115,7 +115,7 @@
                                         <th scope="col">Sex</th>
                                         <th scope="col">Date of birth</th>
                                         <th scope="col">Subcity</th>
-                                        <th scope="col">Kebele ID</th>
+                                        <th scope="col">unit ID</th>
                                         <th scope="col">House NO</th>
                                         <th scope="col">Religion</th>
                                         <th scope="col">Email</th>
@@ -154,7 +154,7 @@
                                             <td><?php printf( "%s", $person['sex'] );?></td>
                                             <td><?php printf( "%s", $person['age'] );?></td>
                                             <td><?php printf( "%s", $person['subcity'] );?></td>
-                                            <td><?php printf( "%s", $person['kebele_id'] );?></td>
+                                            <td><?php printf( "%s", $person['unit_id'] );?></td>
                                             <td><?php printf( "%s", $person['house_id'] );?></td>
                                             <td><?php printf( "%s", $person['religion'] );?></td>
                                             <td><?php printf( "%s", $person['email'] );?></td>
@@ -419,7 +419,7 @@
                                         <th scope="col">Email</th>
                                         <th scope="col">Phone</th>
                                         <th scope="col">Address</th>
-                                        <th scope="col">Kebele</th>
+                                        <th scope="col">unit</th>
                                         <?php if ( 'supervisor' == $sessionRole ) {?>
                                             <!-- Only For Admin -->
                                             <th scope="col">Edit</th>
@@ -449,7 +449,7 @@
                                             <td><?php printf( "%s", $enumerator['email'] );?></td>
                                             <td><?php printf( "%s", $enumerator['phone'] );?></td>
                                             <td><?php printf( "%s", $enumerator['address'] );?></td>
-                                            <td><?php printf( "%s", $enumerator['kebele'] );?></td>
+                                            <td><?php printf( "%s", $enumerator['unit'] );?></td>
                                             <?php if ( 'supervisor' == $sessionRole) {?>
                                                 <!-- Only For Admn -->
                                                 <td><?php printf( "<a href='cms.php?action=editEnumerator&enumerator_id=%s'><i class='fas fa-edit'></i></a>", $enumerator['enumerator_id'] )?></td>
@@ -501,7 +501,7 @@
                                     <div class="col col-12">
                                         <label class="input">
                                             <i id="left" class="fas fa-circle"></i>
-                                            <input type="number" name="kebele" placeholder="kebele" required>
+                                            <input type="number" name="unit" placeholder="unit" required>
                                         </label>
                                     </div>
                                     <div class="col col-12">

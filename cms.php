@@ -635,8 +635,8 @@ form .button input:hover {
 
                                     <span class="details">House document</span>
                                     <input type="file" name="house_file" placeholder="" required>
-                                    <span class="details">Kebele</span>
-                                    <input type="text" name="kebele_id" placeholder="" required>
+                                    <span class="details">unit</span>
+                                    <input type="text" name="unit_id" placeholder="" required>
                                     <span class="details">Sub-city</span>
                                     <select name="subcity" placeholder="" required>
                                         <option value="Abuja">Abuja</option>

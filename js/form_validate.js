@@ -36,9 +36,9 @@ function validate() {
     var house_id = "123";
   }
   try {
-    var kebele = document.getElementsByName("kebele_id")[0].value;
+    var unit = document.getElementsByName("unit_id")[0].value;
   } catch (error) {
-    var kebele = "01";
+    var unit = "01";
   }
   try {
     var age = document.getElementsByName("age")[0].value;
@@ -113,8 +113,8 @@ function validate() {
   ) {
     alert("phone should start with '0' ");
     return false;
-  } else if (!(kebele.length > 0 && kebele.length <= 2)) {
-    alert("invalid kebele number");
+  } else if (!(unit.length > 0 && unit.length <= 2)) {
+    alert("invalid unit number");
     return false;
   } else if (!(house_id >= 0 && house_id < 999 && house_id.length == 3)) {
     alert(" invalid house number");

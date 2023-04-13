@@ -4,7 +4,7 @@
     $attrib=$_GET['attrib'];
     $arr=array();
     $subcity=["Minilik","Tayitu","Atse Zerayakob","Tebase"];
-    //$query = "SELECT distinct subcity FROM kebele";
+    //$query = "SELECT distinct subcity FROM unit";
     //$result = mysqli_query( $connection, $query );
 
     foreach($subcity as $w_id)  {

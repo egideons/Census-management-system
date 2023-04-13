@@ -58,7 +58,7 @@ CREATE TABLE `enumerators` (
   `lname` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(100) NOT NULL,
-  `kebele` varchar(3) NOT NULL,
+  `unit` varchar(3) NOT NULL,
   `password` varchar(100) NOT NULL,
   `role` varchar(100) NOT NULL DEFAULT 'enumerator',
   `avatar` varchar(255) NOT NULL DEFAULT 'avatar.png',
@@ -71,10 +71,8 @@ CREATE TABLE `enumerators` (
 -- Dumping data for table `enumerators`
 --
 
-INSERT INTO `enumerators` (`no`, `enumerator_id`, `fname`, `lname`, `email`, `phone`, `kebele`, `password`, `role`, `avatar`, `status`, `address`, `supervisor_id`) VALUES
-(1, 'enum_04', 'getaneh', 'getaw', 'abebe@gmail.com', '0965328741', '15', '$2y$10$8utjvawfGCHjOotaO3XjpesoMNMLHdQ8yH9UAe37vWNN/SbzkOd.C', 'enumerator', 'avatar.png', b'1', 'tebase', ''),
-(5, 'enum12', 'Mulu', 'Hailu', 'enum@gmail.com', '0987546234', '12', '$2y$10$TB4nHzcE9v7QSo/Ac7bf6.PrHG8Ux2VnBDSXraQTLnVeH595f3O0C', 'enumerator', 'avatar.png', b'1', 'Tebase', 'super123'),
-(7, 'enum_14', 'Abush', 'Mamush', 'abu@gmail.com', '0985425412', '34', '$2y$10$Fd/31D/uOAUIaoYPIc9AteZuDPdX95qJcvJq28/lNSdSv4TSdZrFm', 'enumerator', 'avatar.png', b'1', 'Chacha', 'super333');
+INSERT INTO `enumerators` (`no`, `enumerator_id`, `fname`, `lname`, `email`, `phone`, `unit`, `password`, `role`, `avatar`, `status`, `address`, `supervisor_id`) VALUES
+(1, 'enum_1', 'Gideon', 'Chukwuoma', 'gideon@gmail.com', '07039502751', '34', '$2y$10$Fd/31D/uOAUIaoYPIc9AteZuDPdX95qJcvJq28/lNSdSv4TSdZrFm', 'enumerator', 'avatar.png', b'1', 'Enugu', 'super333');
 
 -- --------------------------------------------------------
 
@@ -102,12 +100,8 @@ CREATE TABLE `guests` (
 --
 
 INSERT INTO `guests` (`guest_id`, `fname`, `lname`, `email`, `phone`, `password`, `role`, `reason`, `isnew`, `status`, `avatar`, `hobby`) VALUES
-(1, 'Henok', 'Selemon', 'heni@gmail.com', '09454542757', '$2y$10$4sDDHuKcVT1rZIR5ic9Y5e4Tf5hWbibjcNbyW8RtfI3DSD5xJy5qS', 'guest', 'group 3project draft.docx', b'0', b'1', 'avatar.png', 'reading'),
-(2, 'kebede', 'alemu', 'kebe@gmail.com', '098765543', '$2y$10$.GIuD6dSiRC01RSpfIhjy.EJ6S75eOmKIch2v0E5T5I4JlMBQHfBm', 'guest', 'ethio-art.docx', b'0', b'1', 'avatar.png', 'reading'),
-(6, 'Adane', 'Berhe', 'ade@gmail.com', '0954321', '$2y$10$0Tuq0ZD7afmka4IHdsgAZ.rpqZ135cvgbBhJ.B8tsSDXyBXxY278S', 'guest', 'google.txt', b'0', b'1', 'avatar.png', ''),
-(15, 'Tenaw', 'Tenaw', 's@gmail.com', '098756321', '$2y$10$ByglD7av51dhC0LAJ6esuOf3K8x8N2tuM1BFIXbjGtJl8eFtPYEmG', 'guest', 'google.txt', b'0', b'1', 'avatar.png', 'football'),
-(17, 'abebech', 'kebede', 'ab@gmail.com', '098741254234', '$2y$10$D57xxFxh1pTD0ou8tjdOeuHkA2DAi9tASCSuM9lalkziYoJovQMNq', 'guest', 'google.txt', b'0', b'1', 'avatar.png', 'football'),
-(18, 'Adane', 'Girma', 'guest@gmail.com', '0923145678', '$2y$10$sDJyOl69m4zKtwRvoB3uWOS7pDcjS4sl81bOIlC310T3mMCGpe8a6', 'guest', 'photo_2022-07-26_10-24-11.pdf', b'0', b'1', 'avatar.png', 'reading');
+
+(1, 'Adane', 'Girma', 'guest@gmail.com', '0923145678', '$2y$10$sDJyOl69m4zKtwRvoB3uWOS7pDcjS4sl81bOIlC310T3mMCGpe8a6', 'guest', 'photo_2022-07-26_10-24-11.pdf', b'0', b'1', 'avatar.png', 'reading');
 
 -- --------------------------------------------------------
 
@@ -120,14 +114,14 @@ CREATE TABLE `house` (
   `house_id` int(11) NOT NULL,
   `house_doc` varchar(40) NOT NULL,
   `subcity` varchar(30) NOT NULL,
-  `kebele_id` varchar(3) NOT NULL
+  `unit_id` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `house`
 --
 
-INSERT INTO `house` (`id`, `house_id`, `house_doc`, `subcity`, `kebele_id`) VALUES
+INSERT INTO `house` (`id`, `house_id`, `house_doc`, `subcity`, `unit_id`) VALUES
 (1, 398, 'vlanStructure.docx', 'atse zerayakob', '02'),
 (2, 367, 'Intel 8086.docx', 'Tebase', '01'),
 (3, 125, 'google.txt', 'Minilik', '03'),
