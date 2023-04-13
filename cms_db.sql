@@ -100,8 +100,7 @@ CREATE TABLE `guests` (
 --
 
 INSERT INTO `guests` (`guest_id`, `fname`, `lname`, `email`, `phone`, `password`, `role`, `reason`, `isnew`, `status`, `avatar`, `hobby`) VALUES
-
-(1, 'Adane', 'Girma', 'guest@gmail.com', '0923145678', '$2y$10$sDJyOl69m4zKtwRvoB3uWOS7pDcjS4sl81bOIlC310T3mMCGpe8a6', 'guest', 'photo_2022-07-26_10-24-11.pdf', b'0', b'1', 'avatar.png', 'reading');
+(1, 'Adane', 'Girma', 'guest@gmail.com', '09022467581', '$2y$10$sDJyOl69m4zKtwRvoB3uWOS7pDcjS4sl81bOIlC310T3mMCGpe8a6', 'guest', 'photo_2022-07-26_10-24-11.pdf', b'0', b'1', 'avatar.png', 'reading');
 
 -- --------------------------------------------------------
 
@@ -113,7 +112,7 @@ CREATE TABLE `house` (
   `id` int(11) NOT NULL,
   `house_id` int(11) NOT NULL,
   `house_doc` varchar(40) NOT NULL,
-  `subcity` varchar(30) NOT NULL,
+  `substate` varchar(30) NOT NULL,
   `unit_id` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -121,15 +120,8 @@ CREATE TABLE `house` (
 -- Dumping data for table `house`
 --
 
-INSERT INTO `house` (`id`, `house_id`, `house_doc`, `subcity`, `unit_id`) VALUES
-(1, 398, 'vlanStructure.docx', 'atse zerayakob', '02'),
-(2, 367, 'Intel 8086.docx', 'Tebase', '01'),
-(3, 125, 'google.txt', 'Minilik', '03'),
-(5, 126, 'google.txt', 'Tayetu', '02'),
-(6, 236, 'photo_2022-08-12_04-30-58.jpg', 'Minilik', '03'),
-(7, 367, 'photo_2022-07-26_10-24-11.pdf', 'Minilik', '02'),
-(8, 123, 'Asmare_Minuye(CV).pdf', 'Minilik', '03'),
-(9, 123, 'ItAssignment.docx', 'Tayetu', '03');
+INSERT INTO `house` (`id`, `house_id`, `house_doc`, `substate`, `unit_id`) VALUES
+(1, 123, 'ItAssignment.docx', 'Enugu', '03');
 
 -- --------------------------------------------------------
 
@@ -150,34 +142,7 @@ CREATE TABLE `notification` (
 --
 
 INSERT INTO `notification` (`not_id`, `sender`, `receiver`, `message`, `date`) VALUES
-(3, 'kebe@gmail.com', '', 'i think it works', '2024-07-22 08:19:30'),
-(5, 'alem@gmail.com', '', 'Hey this is very nice app but why don\'t you add graphs with the report', '2022-07-24 08:58:50'),
-(6, 'alemneh@gmail.com', '', 'please add enumerator edit Hey this is very nice app but why don\'t you add graphs with the report', '2022-07-24 08:25:50'),
-(7, 'heni@gmail.com', '', 'hello i like the system but please......', '2027-07-22 05:10:01'),
-(8, 'abebe@gmail.com', '', 'enumerator check for feedback', '2007-08-22 09:57:45'),
-(9, 'alemu@gmail.com', '', 'a check from the supervisor\r\n\r\n', '2007-08-22 10:07:42'),
-(11, 'user@user.com', '', 'test for the contact page', '2010-08-22 03:07:27'),
-(12, 'abebe@gmail.com', '', 'dggrgebhb', '2013-08-22 12:56:00'),
-(13, 's@gmail.com', '', 'last try from the guest thank you\r\n', '2014-08-22 08:37:46'),
-(14, '1@1.cc', '', 'hello this is from contat us\r\n', '2014-08-22 10:26:49'),
-(15, 'enum12', 'super123', 'hello first chat', '2022-08-16 22:06:24'),
-(16, 'super123', 'enum12', 'the first reply', '2016-08-22 10:08:03'),
-(17, 'enum12', 'super123', 'hello', '2016-08-22 10:13:52'),
-(18, 'enum12', 'super123', 'new message button\r\n', '2016-08-22 10:54:17'),
-(19, 'super123', '', 'hello', '2016-08-22 11:06:44'),
-(20, 'super123', '', 'hello', '2016-08-22 11:10:30'),
-(21, 'super123', '', 'hello', '2016-08-22 11:11:35'),
-(22, 'super123', 'enum12', 'hello', '2016-08-22 11:11:53'),
-(23, 'super123', 'enum12', 'hello', '2016-08-22 11:14:15'),
-(24, 'super123', 'enum12', 'last try for reply button\r\n', '2016-08-22 11:14:56'),
-(25, 'super123', 'enum12', 'last try from new', '2016-08-22 11:15:25'),
-(26, 'enum12', 'super123', 'last try from reply button enum', '2016-08-22 11:17:01'),
-(27, 'enum12', 'super123', 'last try from new button enum', '2016-08-22 11:18:00'),
-(28, 'enum_14', 'super333', 'hello ', '2020-08-22 10:21:48'),
-(29, 'super333', 'enum_14', 'hello too!', '2020-08-22 10:27:51'),
-(30, 'enum_14', 'super333', 'hello from the reply', '2020-08-22 10:28:48'),
-(31, 'super333', 'enum_14', 'Hello too from the reply', '2020-08-22 10:29:19'),
-(32, 'enum_14', 'super333', 'reply workin', '2020-08-22 10:35:22');
+(1, 'enum_14', 'super333', 'Hello, I think it is working', '2020-08-22 10:35:22');
 
 -- --------------------------------------------------------
 
@@ -215,20 +180,7 @@ CREATE TABLE `person` (
 --
 
 INSERT INTO `person` (`person_id`, `name`, `fname`, `gfname`, `sex`, `age`, `house_id`, `married`, `disability`, `birth_place`, `religion`, `education`, `job`, `photo`, `pname`, `pphone`, `phone`, `email`, `birth_cert`, `educ_cert`, `isapproved`, `enum_id`) VALUES
-('10', 'Hailu', 'Habte', 'Dagnu', 'm', '1960-08-09', '398', 'single', 'yes', 'Debre Birhan', 'orthodox', 'masters', 'unemployed', 'avatar.png', 'selemon hailu', '0987546231', '0987542658', 'tame@gmail.com', 'phsychoGroup.docx', 'google.txt', b'0', 'enum_04'),
-('11', 'Abela', 'Takele', 'Girum', 'm', '2022-08-09', '398', 'single', 'yes', 'Debre Birhan', 'orthodox', 'illetrate', 'unemployed', '', 'uggulu bangada', '09674156565', '09874541', '1@1.com', 'HCI_IS_4th_Grade.pdf', 'HCI_IS_4th_Grade.pdf', b'0', 'enum_04'),
-('1234/11', 'Zelalem', 'Ashenafi', 'Molla', 'm', '2022-01-06', '398', 'single', 'no', 'Debre Birhan', 'orthodox', 'illiterate', 'unemployed', 'er.JPG', 'Zelalem Ashenafi', '0967410404', '0967410404', 'zolaashenafi48@gmail.com', 'Organizational behavior.docx', 'Project_functionalities_done.docx', b'1', 'enum12'),
-('1234/25', 'abebe', 'kebede', 'chala', 'm', '2022-08-10', '367', 'married', 'no', 'Debre Birhan', 'protestan', 'certificate', 'governmental', 'Capture4.JPG', 'Zelalem Ashenafi', '0967410404', '0967410404', 'zolaashenafi48@gmail.com', 'SYSTEMS DEVELOPMENT LIFE CYCLE.docx', 'Asmare_Minuye(Cover_Letter).docx', b'1', 'enum12'),
-('13', 'Selemon', 'Bekele', 'Molla', 'm', '2022-08-09', '367', 'married', 'no', 'Chaha', 'protestant', 'masters', 'unemployed', 'images.png', 'heromn selemon', '0988546152', '09214587', 'tame@gmail.com', 'phsycoGroup.docx', 'psycoIndiv.docx', b'0', 'enum_04'),
-('14', 'Bekele', 'Bekalu', 'Sew', 'm', '2022-08-09', '398', 'divorced', 'yes', 'Menz', 'protestant', 'phd', 'governmental', 'projectCode.txt', 'Mndaye molla', '098563214', '0923147896', '1@1.cc', 'A Report on Water Supply Problem in Our ', 'ethio-art.docx', b'1', ''),
-('15', 'Meselech', 'Girma', 'Alemu', 'f', '2022-08-09', '398', 'single', 'no', 'Debre Birhan', 'muslim', 'phd', 'governmental', '', 'Girma Bekele', '0987546321', '09523654', 'meselu@gmail.com', 'google.txt', 'google.txt', b'0', 'enum_01'),
-('1523/11', 'Selemon', 'Mnte', 'Alemu', 'm', '1990-02-20', '125', 'married', 'yes', 'Debre Birhan', 'orthodox', 'illiterate', 'governmental', 'police.jpeg', 'bogale mola', '09874563214', '0954698732', 'abebe@gmail.com', 'mili.docx', 'vlanSructure.docx', b'1', 'enum_14'),
-('16', 'Girum', 'Ermias', 'Mulken', 'm', '2000-08-09', '398', 'single', 'yes', 'Addis ababa', 'orthodox', 'certificate', 'unemployed', '', 'Ermias sew', '09784632', '0911224830', 'aa@gmail.com', 'google.txt', 'google.txt', b'0', 'enum_04'),
-('17', 'Sirak', 'Tadese', 'Birhanu', 'm', '2022-08-09', '398', 'single', 'yes', 'Debre Birhan', 'orthodox', 'illetrate', 'unemployed', 'google.txt', 'Girma Bekele', '092345678', '0987512341', 'admin@admin.com', 'google.txt', 'google.txt', b'0', 'enum_04'),
-('18', 'Selam', 'Tesfayee', 'Selomon', 'f', '2022-08-09', '367', 'married', 'no', 'Addis Ababa', 'protestan', 'certificate', 'non-governmental', 'google.txt', 'abebe gashaw', '0912345634', '0912345678', 'se@gmail.com', 'google.txt', 'google.txt', b'0', 'enum_04'),
-('19', 'Helenita', 'Alemu', 'Molla', 'm', '2022-08-09', '126', 'single', 'no', 'Debre Birhan', 'orthodox', 'illiterate', 'unemployed', 'google.txt', 'Alebachew mekonen', '0987451296', '0978546541', 'hell@gmail.com', 'google.txt', 'google.txt', b'1', 'enum12'),
-('21', 'Hailu', 'abebe', 'Alemu', 'm', '2022-08-09', '398', 'single', 'no', 'Debre Birhan', 'orthodox', 'illiterate', 'unemployed', 'Capture4.JPG', 'abebe gashaw', '0987654321', '0976543223', 'alemu@gmail.com', 'SYSTEMS DEVELOPMENT LIFE CYCLE.docx', 'google.txt', b'1', 'enum12'),
-('5534/11', 'Selam', 'Zelalem', 'Alemu', 'm', '2010-06-08', '398', 'single', 'yes', 'Menz', 'orthodox', 'illiterate', 'unemployed', 'Capture4.JPG', 'Zelalem Ashenafi', '0967410404', '0967410404', 'zolaashenafi48@gmail.com', 'Project_functionalities_done.docx', 'Project_functionalities_done.docx', b'1', 'enum12');
+('1', 'egideons', 'Gideon', 'Chukwuoma', 'm', '2010-06-08', '398', 'single', 'no', 'Lagos', 'Christianity', 'educated', 'unemployed', 'Capture4.JPG', 'Zelalem Ashenafi', '0967410404', '0967410404', 'zolaashenafi48@gmail.com', 'Project_functionalities_done.docx', 'Project_functionalities_done.docx', b'1', 'enum12');
 
 -- --------------------------------------------------------
 
@@ -243,7 +195,7 @@ CREATE TABLE `supervisors` (
   `lname` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(100) NOT NULL,
-  `subcity` varchar(30) NOT NULL,
+  `substate` varchar(30) NOT NULL,
   `password` varchar(100) NOT NULL,
   `role` varchar(100) NOT NULL DEFAULT 'supervisor',
   `avatar` varchar(255) NOT NULL DEFAULT 'avatar.png',
@@ -255,13 +207,8 @@ CREATE TABLE `supervisors` (
 -- Dumping data for table `supervisors`
 --
 
-INSERT INTO `supervisors` (`no`, `supervisor_id`, `fname`, `lname`, `email`, `phone`, `subcity`, `password`, `role`, `avatar`, `status`, `address`) VALUES
-(5, 'super_03', 'Tade', 'Mekonene', 'tade@gmail.com', '0985236541', 'Tebase', '$2y$10$EXYNDOnKmgcUp3YOg2GsaOOISWxAJSNdm3Swa7dpG42BhFjJTpOmy', 'supervisor', 'avatar.png', b'1', 'Chacha'),
-(6, 'super001', 'Tadesse', 'Molla', 'tade@yahoo.com', '0956712222', 'Minilik', '$2y$10$jsNSlqxv78D4q.QKNxClru/SxCiFjZxKDFagDYCsgmARzjL7tvg5u', 'supervisor', 'avatar.png', b'1', 'Tebase'),
-(7, 'super123', 'Teka', 'Molla', 'super@gmail.com', '0912345678', 'Atse zerayakob', '$2y$10$qokp8OHpSgr3h2IELJyEte2w.IXoC0/mZjdqvDhZnXtSu7ERPOvRm', 'supervisor', 'avatar.png', b'1', 'Chaha'),
-(8, 'super345', 'Zelalem', 'Ashenafi', 'zolaashenafi48@gmail.com', '0967410404', 'Tayetu', '$2y$10$zOOfVSVINXrLu4gfQXYdvOMu5Ec43hTb.f9ax.nhQTMFCpmYDXTJq', 'supervisor', 'avatar.png', b'1', 'A/k subcity'),
-(9, 'super123', 'Asefa', 'Safi', 'hello@gmail.com', '0987456523', 'Minilik', '$2y$10$8ink1RuwHNFewvJV15kNz.NkKQnZsffEi.4cQCDhXP/LdpEMN88ti', 'supervisor', 'avatar.png', b'1', 'Chaha'),
-(10, 'super333', 'Aster', 'Alemayew', 'cha@gmail.com', '0912365478', 'Minilik', '$2y$10$D/HCeZuXz/8L/eBahvAg0OPlAyQQi7Aq6ySWGF6ujbFmjL55BKeAq', 'supervisor', 'avatar.png', b'1', 'Chacha');
+INSERT INTO `supervisors` (`no`, `supervisor_id`, `fname`, `lname`, `email`, `phone`, `substate`, `password`, `role`, `avatar`, `status`, `address`) VALUES
+(1, 'super333', 'Aster', 'Alema', 'cha@gmail.com', '09012365478', 'Enugu', '$2y$10$D/HCeZuXz/8L/eBahvAg0OPlAyQQi7Aq6ySWGF6ujbFmjL55BKeAq', 'supervisor', 'avatar.png', b'1', 'Enugu');
 
 --
 -- Indexes for dumped tables

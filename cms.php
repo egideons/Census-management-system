@@ -638,7 +638,7 @@ form .button input:hover {
                                     <span class="details">unit</span>
                                     <input type="text" name="unit_id" placeholder="" required>
                                     <span class="details">Sub-city</span>
-                                    <select name="subcity" placeholder="" required>
+                                    <select name="substate" placeholder="" required>
                                         <option value="Abuja">Abuja</option>
                                         <option value="Lagos">Lagos</option>
                                         <option value="Port-Harcourt">Port-Harcourt</option>

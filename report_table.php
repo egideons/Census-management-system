@@ -3,22 +3,22 @@
 <?php
     $attrib=$_GET['attrib'];
     $arr=array();
-    $subcity=["Minilik","Tayitu","Atse Zerayakob","Tebase"];
-    //$query = "SELECT distinct subcity FROM unit";
+    $substate=["Minilik","Tayitu","Atse Zerayakob","Tebase"];
+    //$query = "SELECT distinct substate FROM unit";
     //$result = mysqli_query( $connection, $query );
 
-    foreach($subcity as $w_id)  {
+    foreach($substate as $w_id)  {
         
         
         if($attrib=='gender')
         {
-            $query2 = "SELECT COUNT(*) totalMale FROM person  inner join house on house.house_id=person.house_id  where sex='m' and subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalMale FROM person  inner join house on house.house_id=person.house_id  where sex='m' and substate='$w_id';";
           
             $result2 = mysqli_query( $connection, $query2 );
             
             $totalMale = $result2?mysqli_fetch_assoc( $result2 ):0;
             $totalMale=$totalMale['totalMale'];
-            $query2 = "SELECT COUNT(*) totalFemale FROM person inner join house on house.house_id=person.house_id  where sex='f' and subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalFemale FROM person inner join house on house.house_id=person.house_id  where sex='f' and substate='$w_id';";
            
             $result2 = mysqli_query( $connection, $query2 );
             $totalFemale = $result2?mysqli_fetch_assoc( $result2 ):0;
@@ -35,7 +35,7 @@
                                 <thead>
                                     <tr>
                                         
-                                        <th scope="col">subcity</th>
+                                        <th scope="col">substate</th>
                                         <th scope="col">Male</th>
                                         <th scope="col">Female</th>
                                         <th scope="col">Total</th>
@@ -75,15 +75,15 @@
     }
         else if($attrib=='religion')
         {
-            $query2 = "SELECT COUNT(*) totalOrthodox FROM person inner join house on house.house_id=person.house_id  where religion='Orthodox' and subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalOrthodox FROM person inner join house on house.house_id=person.house_id  where religion='Orthodox' and substate='$w_id';";
             $result2 = mysqli_query( $connection, $query2 );
             $totalOrthodox = $result2?mysqli_fetch_assoc( $result2 ):0;
             $totalOrthodox=$totalOrthodox['totalOrthodox'];
-            $query2 = "SELECT COUNT(*) totalProtestant FROM person inner join house on house.house_id=person.house_id  where religion='Protestant' and subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalProtestant FROM person inner join house on house.house_id=person.house_id  where religion='Protestant' and substate='$w_id';";
             $result2 = mysqli_query( $connection, $query2 );
             $totalProtestant = $result2?mysqli_fetch_assoc( $result2 ):0;
             $totalProtestant=$totalProtestant['totalProtestant'];
-            $query2 = "SELECT COUNT(*) totalMuslim FROM person inner join house on house.house_id=person.house_id  where religion='Muslim' and subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalMuslim FROM person inner join house on house.house_id=person.house_id  where religion='Muslim' and substate='$w_id';";
             $result2 = mysqli_query( $connection, $query2 );
             $totalMuslim = $result2?mysqli_fetch_assoc( $result2 ):0;
             $totalMuslim=$totalMuslim['totalMuslim'];
@@ -97,7 +97,7 @@
                                 <thead>
                                     <tr>
                                         
-                                        <th scope="col">subcity</th>
+                                        <th scope="col">substate</th>
                                         <th scope="col">Orthodox</th>
                                         <th scope="col">Protestant</th>
                                         <th scope="col">Muslim</th>
@@ -132,23 +132,23 @@
     }
         else if($attrib=='education')
         {
-            $query2 = "SELECT COUNT(*) totalIlletrate FROM person inner join house on house.house_id=person.house_id  where education='illitrate' and subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalIlletrate FROM person inner join house on house.house_id=person.house_id  where education='illitrate' and substate='$w_id';";
             $result2 = mysqli_query( $connection, $query2 );
             $totalIlletrate = $result2?mysqli_fetch_assoc( $result2 ):0;
             $totalIlletrate=$totalIlletrate['totalIlletrate'];
-            $query2 = "SELECT COUNT(*) totalCertificate FROM person inner join house on house.house_id=person.house_id  where education='certificate' and subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalCertificate FROM person inner join house on house.house_id=person.house_id  where education='certificate' and substate='$w_id';";
             $result2 = mysqli_query( $connection, $query2 );
             $totalCertificate = $result2?mysqli_fetch_assoc( $result2 ):0;
             $totalCertificate=$totalCertificate['totalCertificate'];
-            $query2 = "SELECT COUNT(*) totalDegree FROM person inner join house on house.house_id=person.house_id  where education='degree' and subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalDegree FROM person inner join house on house.house_id=person.house_id  where education='degree' and substate='$w_id';";
             $result2 = mysqli_query( $connection, $query2 );
             $totalDegree = $result2?mysqli_fetch_assoc( $result2 ):0;
             $totalDegree=$totalDegree['totalDegree'];
-            $query2 = "SELECT COUNT(*) totalMasters FROM person inner join house on house.house_id=person.house_id  where education='masters' and subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalMasters FROM person inner join house on house.house_id=person.house_id  where education='masters' and substate='$w_id';";
             $result2 = mysqli_query( $connection, $query2 );
             $totalMasters = $result2?mysqli_fetch_assoc( $result2 ):0;
             $totalMasters=$totalMasters['totalMasters'];
-            $query2 = "SELECT COUNT(*) totalPHD FROM person inner join house on house.house_id=person.house_id  where education='phd' and subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalPHD FROM person inner join house on house.house_id=person.house_id  where education='phd' and substate='$w_id';";
             $result2 = mysqli_query( $connection, $query2 );
             $totalPHD = $result2?mysqli_fetch_assoc( $result2 ):0;
             $totalPHD=$totalPHD['totalPHD'];
@@ -161,7 +161,7 @@
                                 <thead>
                                     <tr>
                                         
-                                        <th scope="col">subcity</th>
+                                        <th scope="col">substate</th>
                                         <th scope="col">Illetrate</th>
                                         <th scope="col">Certificate</th>
                                         <th scope="col">Degree</th>
@@ -203,7 +203,7 @@
     }
         else if($attrib=='house')
         {
-            $query2 = "SELECT COUNT(*) totalhouse FROM house where subcity='$w_id';";
+            $query2 = "SELECT COUNT(*) totalhouse FROM house where substate='$w_id';";
             
             $result2 = mysqli_query( $connection, $query2 );
             $totalHouse = $result2?mysqli_fetch_assoc( $result2 ):0;
@@ -216,7 +216,7 @@
                                 <thead>
                                     <tr>
                                         
-                                        <th scope="col">subcity</th>
+                                        <th scope="col">substate</th>
                                         
                                         <th scope="col">Number of Houses</th>
                                                                                 
@@ -235,7 +235,7 @@
         else if($attrib=='age')
         { 
             $totalBaby=$totalAdult=$totalElder=$totalYoung=$totalTeen=0;
-            $query2 = "select age from person inner join house on person.house_id=house.house_id where house.subcity='$w_id';";
+            $query2 = "select age from person inner join house on person.house_id=house.house_id where house.substate='$w_id';";
             $result2 = mysqli_query( $connection, $query2 );
             while($row2=mysqli_fetch_assoc($result2))
             {
@@ -292,7 +292,7 @@
                                 <thead>
                                     <tr>
                                         
-                                        <th scope="col">subcity</th>
+                                        <th scope="col">substate</th>
                                         <th scope="col">Baby</th>
                                         <th scope="col">Teen</th>
                                         <th scope="col">Young</th>

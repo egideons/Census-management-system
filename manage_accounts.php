@@ -26,7 +26,7 @@
                                         <th scope="col">G.Name</th>
                                         <th scope="col">Sex</th>
                                         <th scope="col">Date of birth</th>
-                                        <th scope="col">Subcity</th>
+                                        <th scope="col">substate</th>
                                         <th scope="col">unit ID</th>
                                         <th scope="col">House NO</th>
                                         <th scope="col">Religion</th>
@@ -66,7 +66,7 @@
                                             <td><?php printf( "%s", $person['gfname'] );?></td>
                                             <td><?php printf( "%s", $person['sex'] );?></td>
                                             <td><?php printf( "%s", $person['age'] );?></td>
-                                            <td><?php printf( "%s", $person['subcity'] );?></td>
+                                            <td><?php printf( "%s", $person['substate'] );?></td>
                                             <td><?php printf( "%s", $person['unit_id'] );?></td>
                                             <td><?php printf( "%s", $person['house_id'] );?></td>
                                             <td><?php printf( "%s", $person['religion'] );?></td>
@@ -114,7 +114,7 @@
                                         <th scope="col">G.Name</th>
                                         <th scope="col">Sex</th>
                                         <th scope="col">Date of birth</th>
-                                        <th scope="col">Subcity</th>
+                                        <th scope="col">substate</th>
                                         <th scope="col">unit ID</th>
                                         <th scope="col">House NO</th>
                                         <th scope="col">Religion</th>
@@ -153,7 +153,7 @@
                                             <td><?php printf( "%s", $person['gfname'] );?></td>
                                             <td><?php printf( "%s", $person['sex'] );?></td>
                                             <td><?php printf( "%s", $person['age'] );?></td>
-                                            <td><?php printf( "%s", $person['subcity'] );?></td>
+                                            <td><?php printf( "%s", $person['substate'] );?></td>
                                             <td><?php printf( "%s", $person['unit_id'] );?></td>
                                             <td><?php printf( "%s", $person['house_id'] );?></td>
                                             <td><?php printf( "%s", $person['religion'] );?></td>
@@ -208,7 +208,7 @@
                                         <th scope="col">Email</th>
                                         <th scope="col">Phone</th>
                                         <th scope="col">Address</th>
-                                        <th scope="col">Subcity allocated</th>
+                                        <th scope="col">substate allocated</th>
                                         <?php if ( 'admin' == $sessionRole ) {?>
                                             <!-- Only For Admin -->
                                             <th scope="col">Edit</th>
@@ -237,7 +237,7 @@
                                             <td><?php printf( "%s", $supervisor['email'] );?></td>
                                             <td><?php printf( "%s", $supervisor['phone'] );?></td>
                                             <td><?php printf( "%s", $supervisor['address'] );?></td>
-                                            <td><?php printf( "%s", $supervisor['subcity'] );?></td>
+                                            <td><?php printf( "%s", $supervisor['substate'] );?></td>
                                             <?php if (  'supervisor' == $sessionRole||'admin' == $sessionRole) {?>
                                                 <!-- Only For Admin -->
                                                 <td><?php printf( "<a href='cms.php?action=editSupervisor&supervisor_id=%s'><i class='fas fa-edit'></i></a>", $supervisor['supervisor_id'] )?></td>
@@ -288,11 +288,11 @@
                                     <div class="col col-12">
                                         <label class="input">
                                             <i id="left" class="fas fa-envelope"></i>
-                                            <select name="subcity" placeholder="" required>
-                    <option value="Tebase">Tebase Subcity</option>
-                    <option value="Minilik">Minilik Subcity</option>
-                    <option value="Tayitu">Tayitu Subcity</option>
-                    <option value="Atse zerayakob">Atse zerayakob Subcity</option>
+                                            <select name="substate" placeholder="" required>
+                    <option value="Tebase">Tebase substate</option>
+                    <option value="Minilik">Minilik substate</option>
+                    <option value="Tayitu">Tayitu substate</option>
+                    <option value="Atse zerayakob">Atse zerayakob substate</option>
                     
                    
                 </select>

@@ -58,7 +58,7 @@
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-disabled {
+.ui-substate-disabled {
 	cursor: default !important;
 }
 
@@ -66,7 +66,7 @@
 /* Icons
 ----------------------------------*/
 
-/* states and images */
+/* substates and images */
 .ui-icon {
 	display: block;
 	text-indent: -99999px;
@@ -560,8 +560,8 @@ button.ui-button::-moz-focus-inner {
 	line-height: 0;
 	border-width: 1px 0 0 0;
 }
-.ui-menu .ui-state-focus,
-.ui-menu .ui-state-active {
+.ui-menu .ui-substate-focus,
+.ui-menu .ui-substate-active {
 	margin: -1px;
 }
 
@@ -677,8 +677,8 @@ button.ui-button::-moz-focus-inner {
 }
 
 /* support: IE8 - See #6727 */
-.ui-slider.ui-state-disabled .ui-slider-handle,
-.ui-slider.ui-state-disabled .ui-slider-range {
+.ui-slider.ui-substate-disabled .ui-slider-handle,
+.ui-slider.ui-substate-disabled .ui-slider-range {
 	filter: inherit;
 }
 
@@ -802,7 +802,7 @@ button.ui-button::-moz-focus-inner {
 	padding-bottom: 1px;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
-.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-substate-disabled .ui-tabs-anchor,
 .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
 	cursor: text;
 }
@@ -861,88 +861,88 @@ body .ui-tooltip {
 	color: #333333;
 }
 
-/* Interaction states
+/* Interaction substates
 ----------------------------------*/
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default {
+.ui-substate-default,
+.ui-widget-content .ui-substate-default,
+.ui-widget-header .ui-substate-default {
 	border: 1px solid #c5c5c5;
 	background: #f6f6f6;
 	font-weight: normal;
 	color: #454545;
 }
-.ui-state-default a,
-.ui-state-default a:link,
-.ui-state-default a:visited {
+.ui-substate-default a,
+.ui-substate-default a:link,
+.ui-substate-default a:visited {
 	color: #454545;
 	text-decoration: none;
 }
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus {
+.ui-substate-hover,
+.ui-widget-content .ui-substate-hover,
+.ui-widget-header .ui-substate-hover,
+.ui-substate-focus,
+.ui-widget-content .ui-substate-focus,
+.ui-widget-header .ui-substate-focus {
 	border: 1px solid #cccccc;
 	background: #ededed;
 	font-weight: normal;
 	color: #2b2b2b;
 }
-.ui-state-hover a,
-.ui-state-hover a:hover,
-.ui-state-hover a:link,
-.ui-state-hover a:visited,
-.ui-state-focus a,
-.ui-state-focus a:hover,
-.ui-state-focus a:link,
-.ui-state-focus a:visited {
+.ui-substate-hover a,
+.ui-substate-hover a:hover,
+.ui-substate-hover a:link,
+.ui-substate-hover a:visited,
+.ui-substate-focus a,
+.ui-substate-focus a:hover,
+.ui-substate-focus a:link,
+.ui-substate-focus a:visited {
 	color: #2b2b2b;
 	text-decoration: none;
 }
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active {
+.ui-substate-active,
+.ui-widget-content .ui-substate-active,
+.ui-widget-header .ui-substate-active {
 	border: 1px solid #003eff;
 	background: #007fff;
 	font-weight: normal;
 	color: #ffffff;
 }
-.ui-state-active a,
-.ui-state-active a:link,
-.ui-state-active a:visited {
+.ui-substate-active a,
+.ui-substate-active a:link,
+.ui-substate-active a:visited {
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight,
-.ui-widget-content .ui-state-highlight,
-.ui-widget-header .ui-state-highlight {
+.ui-substate-highlight,
+.ui-widget-content .ui-substate-highlight,
+.ui-widget-header .ui-substate-highlight {
 	border: 1px solid #dad55e;
 	background: #fffa90;
 	color: #777620;
 }
-.ui-state-highlight a,
-.ui-widget-content .ui-state-highlight a,
-.ui-widget-header .ui-state-highlight a {
+.ui-substate-highlight a,
+.ui-widget-content .ui-substate-highlight a,
+.ui-widget-header .ui-substate-highlight a {
 	color: #777620;
 }
-.ui-state-error,
-.ui-widget-content .ui-state-error,
-.ui-widget-header .ui-state-error {
+.ui-substate-error,
+.ui-widget-content .ui-substate-error,
+.ui-widget-header .ui-substate-error {
 	border: 1px solid #f1a899;
 	background: #fddfdf;
 	color: #5f3f3f;
 }
-.ui-state-error a,
-.ui-widget-content .ui-state-error a,
-.ui-widget-header .ui-state-error a {
+.ui-substate-error a,
+.ui-widget-content .ui-substate-error a,
+.ui-widget-header .ui-substate-error a {
 	color: #5f3f3f;
 }
-.ui-state-error-text,
-.ui-widget-content .ui-state-error-text,
-.ui-widget-header .ui-state-error-text {
+.ui-substate-error-text,
+.ui-widget-content .ui-substate-error-text,
+.ui-widget-header .ui-substate-error-text {
 	color: #5f3f3f;
 }
 .ui-priority-primary,
@@ -957,21 +957,21 @@ body .ui-tooltip {
 	filter:Alpha(Opacity=70); /* support: IE8 */
 	font-weight: normal;
 }
-.ui-state-disabled,
-.ui-widget-content .ui-state-disabled,
-.ui-widget-header .ui-state-disabled {
+.ui-substate-disabled,
+.ui-widget-content .ui-substate-disabled,
+.ui-widget-header .ui-substate-disabled {
 	opacity: .35;
 	filter:Alpha(Opacity=35); /* support: IE8 */
 	background-image: none;
 }
-.ui-state-disabled .ui-icon {
+.ui-substate-disabled .ui-icon {
 	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
 }
 
 /* Icons
 ----------------------------------*/
 
-/* states and images */
+/* substates and images */
 .ui-icon {
 	width: 16px;
 	height: 16px;
@@ -983,21 +983,21 @@ body .ui-tooltip {
 .ui-widget-header .ui-icon {
 	background-image: url("../images/ui-icons_444444_256x240.png");
 }
-.ui-state-default .ui-icon {
+.ui-substate-default .ui-icon {
 	background-image: url("../images/ui-icons_777777_256x240.png");
 }
-.ui-state-hover .ui-icon,
-.ui-state-focus .ui-icon {
+.ui-substate-hover .ui-icon,
+.ui-substate-focus .ui-icon {
 	background-image: url("../images/ui-icons_555555_256x240.png");
 }
-.ui-state-active .ui-icon {
+.ui-substate-active .ui-icon {
 	background-image: url("../images/ui-icons_ffffff_256x240.png");
 }
-.ui-state-highlight .ui-icon {
+.ui-substate-highlight .ui-icon {
 	background-image: url("../images/ui-icons_777620_256x240.png");
 }
-.ui-state-error .ui-icon,
-.ui-state-error-text .ui-icon {
+.ui-substate-error .ui-icon,
+.ui-substate-error-text .ui-icon {
 	background-image: url("../images/ui-icons_cc0000_256x240.png");
 }
 
