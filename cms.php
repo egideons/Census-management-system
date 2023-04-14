@@ -19,167 +19,144 @@
   border-radius: 5px;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 } */
-.message-list {
-    display: block;
-    margin: 20px;
-    background: #eee;
+.message-list{
+  display: block;
+  margin:20px;
+  background: #eee;
     border: 1px solid #ddd;
-
+    
     margin: 0 0 10px;
     padding-left: 30px;
     background-position: left center;
 }
-
-.message-list .from {
-    font-weight: bold;
-    font-size: 25px;
-    display: block;
-    margin: 5px;
+.message-list .from{
+  font-weight: bold;
+  font-size: 25px;
+  display:block;
+  margin:5px;
 }
-
-.message-list .date {
-    font-style: italic;
-    font-size: 11px;
-    display: block;
-
+.message-list .date{
+  font-style: italic;
+  font-size: 11px;
+  display:block;
+    
 
 }
-
-.message-list .message {
-    font-weight: bold;
-    font-size: larger;
-    display: block;
-    margin: 5px;
-    word-wrap: break-word;
+.message-list .message{
+  font-weight: bold;
+  font-size: larger;
+  display:block;
+  margin:5px;
+  word-wrap:break-word;
 }
-
-.content form .user-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0 12px 0;
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
 }
-
-form .user-details .input-box {
-    margin-bottom: 15px;
-    width: calc(100% / 2 - 20px);
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
 }
-
-form .input-box span.details {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
 }
-
-.user-details .input-box input,
-.user-details .input-box textarea {
-    height: 45px;
-    width: 100%;
-    outline: none;
-    font-size: 16px;
-    border-radius: 5px;
-    padding-left: 15px;
-    border: 1px solid #ccc;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
+.user-details .input-box input,.user-details .input-box textarea
+{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
 }
-
 .user-details .input-box input:focus,
-.user-details .input-box input:valid {
-    border-color: #9b59b6;
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
 }
-
-form .gender-details .gender-title {
-    font-size: 20px;
-    font-weight: 500;
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
 }
-
-form .category {
-    display: flex;
-    width: 80%;
-    margin: 14px 0;
-    justify-content: space-between;
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  width: 70%;
 }
-
-form .category label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-form .category label .dot {
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    margin-right: 10px;
-    background: #d9d9d9;
-    border: 5px solid transparent;
-    transition: all 0.3s ease;
-}
-
-#dot-1:checked~.category label .one,
-#dot-2:checked~.category label .two,
-    {
-    background: #9b59b6;
-    border-color: #d9d9d9;
-}
-
-form input[type="radio"] {
-    display: none;
-}
-
-form .button {
-    height: 45px;
-    margin: 35px 0
-}
-
-form .button input {
-    height: 100%;
+form .user-details .input-box{
+    margin-bottom: 15px;
     width: 100%;
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
-}
-
-form .button input:hover {
-    /* transform: scale(0.99); */
-    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
-}
-
-@media(max-width: 584px) {
-    .container {
-        width: 70%;
-    }
-
-    form .user-details .input-box {
-        margin-bottom: 15px;
-        width: 100%;
-    }
-
-    form .category {
-        width: 100%;
-    }
-
-    .content form .user-details {
-        max-height: 300px;
-        overflow-y: scroll;
-    }
-
-    .user-details::-webkit-scrollbar {
-        width: 5px;
-    }
-}
-
-@media(max-width: 459px) {
-    .container .content .category {
-        flex-direction: column;
-    }
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
 }
 </style>
 <?php
@@ -222,14 +199,14 @@ form .button input:hover {
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css" />
-    <link rel="stylesheet" type="text/css" href="./css/jquery.dataTables.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
+    <link rel = "stylesheet" type = "text/css" href = "./css/bootstrap.css" />
+		<link rel = "stylesheet" type = "text/css" href = "./css/style.css" />
+		<link rel = "stylesheet" type = "text/css" href = "./css/jquery-ui.css" />
+		<link rel = "stylesheet" type = "text/css" href = "./css/jquery.dataTables.css" />
+    	<meta charset = "UTF-8" />
+		<meta name = "viewport" content = "width=device-width, initial-scale=1" />
+		
+	
     <title><?php echo $_REQUEST['id'] ?? 'CMS'; ?></title>
 </head>
 
@@ -282,21 +259,20 @@ form .button input:hover {
                     $role = $data['role'];
                     $avatar = $data['avatar'];
                 ?>
-            <img src="assets/img/<?php echo "$avatar"; ?>" height="25" width="25" class="rounded-circle" alt="profile">
-            <div class="dropdown">
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+                <img src="assets/img/<?php echo "$avatar"; ?>" height="25" width="25" class="rounded-circle" alt="profile">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?php
                         echo "$fname $lname (" . ucwords( $role ) . " )";
                         }
                     ?>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="cms.php">Dashboard</a>
-                    <a class="dropdown-item" href="cms.php?id=userProfile">Profile</a>
-                    <a class="dropdown-item" href="logout.php">Log Out</a>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="cms.php">Dashboard</a>
+                        <a class="dropdown-item" href="cms.php?id=userProfile">Profile</a>
+                        <a class="dropdown-item" href="logout.php">Log Out</a>
+                    </div>
                 </div>
-            </div>
         </div>
     </section>
     <!--------------------------------- Secondary Navber -------------------------------->
@@ -305,10 +281,9 @@ form .button input:hover {
     <!--------------------------------- Sideber -------------------------------->
     <section id="sideber" class="sideber">
         <ul class="sideber__ber">
-
-            <h3 class="sideber__panel"><i id="left"></i><img style="height:40px;" src="./assets/img/logo.png"></img>
-            </h3>
-
+            
+        <h3 class="sideber__panel"><i id="left" ></i><img style="height:40px;" src="./assets/img/logo.png"></img></h3>
+            
             <?php if($sessionRole!='guest'){?>
             <li id="left" class="sideber__item<?php if ( 'dashboard' == $id ) {
                                                   echo " active";
@@ -318,129 +293,126 @@ form .button input:hover {
             <?php } ?>
             <?php if ( 'admin' == $sessionRole ) {?>
 
-
-
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_census_report' == $id ) {
+                
+                
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_census_report' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=view_census_report"><i id="left" class="fas fa-user-plus"></i></i>View census</a>
-            </li>
-
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'manage_supervisor' == $id ) {
+                    <a href="cms.php?id=view_census_report"><i id="left" class="fas fa-user-plus"></i></i>View census</a>
+                </li>
+                
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'manage_supervisor' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=manage_supervisor"><i id="left" class="fas fa-user-plus"></i></i>Manage Supervisors
-                    account</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'manage_enumerator' == $id ) {
+                    <a href="cms.php?id=manage_supervisor"><i id="left" class="fas fa-user-plus"></i></i>Manage Supervisors account</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'manage_enumerator' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=manage_enumerator"><i id="left" class="fas fa-user-plus"></i></i>Manage
-                    Enumerator</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'manage_guest' == $id ) {
+                    <a href="cms.php?id=manage_enumerator"><i id="left" class="fas fa-user-plus"></i></i>Manage Enumerator</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'manage_guest' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=manage_guest"><i id="left" class="fas fa-user-plus"></i></i>Manage Guest</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_report' == $id ) {
+                    <a href="cms.php?id=manage_guest"><i id="left" class="fas fa-user-plus"></i></i>Manage Guest</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_report' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=view_report"><i id="left" class="fas fa-user-plus"></i></i>View report</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_feedback' == $id ) {
+                    <a href="cms.php?id=view_report"><i id="left" class="fas fa-user-plus"></i></i>View report</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_feedback' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=view_feedback"><i id="left" class="fas fa-user-plus"></i></i>View Feedback</a>
-            </li>
-
-
-            <?php }?>
+                    <a href="cms.php?id=view_feedback"><i id="left" class="fas fa-user-plus"></i></i>View Feedback</a>
+                </li>
+                
+                
+                <?php }?>
             <?php if ( 'supervisor' == $sessionRole ) {?>
 
-
-
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_census_report' == $id ) {
+                
+                
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_census_report' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=view_census_report"><i id="left" class="fas fa-user-plus"></i></i>View census</a>
-            </li>
-
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'manage_enumerator' == $id ) {
+                    <a href="cms.php?id=view_census_report"><i id="left" class="fas fa-user-plus"></i></i>View census</a>
+                </li>
+                
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'manage_enumerator' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=manage_enumerator"><i id="left" class="fas fa-user-plus"></i></i>Manage Enumerators
-                    account</a>
-            </li>
-
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_report' == $id ) {
+                    <a href="cms.php?id=manage_enumerator"><i id="left" class="fas fa-user-plus"></i></i>Manage Enumerators account</a>
+                </li>
+                
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_report' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=view_report"><i id="left" class="fas fa-user-plus"></i></i>Generate report</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'messages' == $id ) {
+                    <a href="cms.php?id=view_report"><i id="left" class="fas fa-user-plus"></i></i>Generate report</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'messages' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=message"><i id="left" class="fas fa-user-plus"></i></i>Messages</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'feedback' == $id ) {
+                    <a href="cms.php?id=message"><i id="left" class="fas fa-user-plus"></i></i>Messages</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'feedback' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=feedback"><i id="left" class="fas fa-user-plus"></i></i>Send Feedback</a>
-            </li>
-
-            <?php }?>
+                    <a href="cms.php?id=feedback"><i id="left" class="fas fa-user-plus"></i></i>Send Feedback</a>
+                </li>
+                
+                <?php }?>
             <?php if ( 'enumerator' == $sessionRole ) {?>
 
-
-
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_registered' == $id ) {
+                
+                
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_registered' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=view_registered"><i id="left" class="fas fa-user-plus"></i></i>View registered</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'fill_form' == $id ) {
+                    <a href="cms.php?id=view_registered"><i id="left" class="fas fa-user-plus"></i></i>View registered</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'fill_form' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=fill_form"><i id="left" class="fas fa-user-plus"></i></i>Fill census form</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'fill_form' == $id ) {
+                    <a href="cms.php?id=fill_form"><i id="left" class="fas fa-user-plus"></i></i>Fill census form</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'fill_form' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=fill_house_form"><i id="left" class="fas fa-user-plus"></i></i>Fill house form</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'messages' == $id ) {
+                    <a href="cms.php?id=fill_house_form"><i id="left" class="fas fa-user-plus"></i></i>Fill house form</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'messages' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=message"><i id="left" class="fas fa-user-plus"></i></i>Messages</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'feedback' == $id ) {
+                    <a href="cms.php?id=message"><i id="left" class="fas fa-user-plus"></i></i>Messages</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'feedback' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=feedback"><i id="left" class="fab fa-snapchat"></i></i>Send Feedback</a>
-            </li>
-
-
-            <?php }?>
+                    <a href="cms.php?id=feedback"><i id="left" class="fab fa-snapchat"></i></i>Send Feedback</a>
+                </li>
+                
+                
+                <?php }?>
             <?php if ( 'guest' == $sessionRole ) {?>
 
-
-
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_reports' == $id ) {
+                
+                
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'view_reports' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=view_report"><i id="left" class="fas fa-user-plus"></i></i>Reports</a>
-            </li>
-            <li id="left" class="sideber__item sideber__item--modify<?php if ( 'feedback' == $id ) {
+                    <a href="cms.php?id=view_report"><i id="left" class="fas fa-user-plus"></i></i>Reports</a>
+                </li>
+                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'feedback' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                <a href="cms.php?id=feedback"><i id="left" class="fas fa-user-plus"></i></i>Send Feedback</a>
-            </li>
-
-
-
-            <?php }?>
-
+                    <a href="cms.php?id=feedback"><i id="left" class="fas fa-user-plus"></i></i>Send Feedback</a>
+                </li>
+                
+                
+                
+                <?php }?>
+            
     </section>
     <!--------------------------------- #Sideber -------------------------------->
 
@@ -459,78 +431,75 @@ form .button input:hover {
             include 'manage_accounts.php';
             
             ?>
+                
+                <?php if ( 'fill_form' == $id ) {?>
+                    <div class="addEnumerator">
 
-            <?php if ( 'fill_form' == $id ) {?>
-            <div class="addEnumerator">
-
-                <div class="container2">
-                    <div class="title">Registration</div>
-                    <div class="content">
-                        <form onSubmit="return validate()" enctype="multipart/form-data"
-                            action="add.php?action=addPerson" method="POST">
-                            <div class="user-details">
-
-                                <div id="picture">
-                                    <img height="200px" width="200px" id="pic" src="./assets/img/avatar.png" />
-                                    <div class="form-group">
-                                        <input id="image" type='file' name="image"
-                                            onchange="document.getElementById('pic').src = window.URL.createObjectURL(this.files[0])"
-                                            required />
-                                    </div>
+  <div class="container2">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form onSubmit="return validate()" enctype="multipart/form-data" action="add.php?action=addPerson" method="POST">
+        <div class="user-details">
+        
+									<div id = "picture">
+										<img  height = "200px" width = "200px" id="pic" src="./assets/img/avatar.png" />
+									<div class = "form-group">
+										<input id="image" type='file' name = "image" onchange="document.getElementById('pic').src = window.URL.createObjectURL(this.files[0])" required/>
+									</div>
                                 </div>
+									
+									
+        <div class="input-box">
+            <span class="details">ID</span>
+            <input type="text" name="id" placeholder="" required>
 
-
-                                <div class="input-box">
-                                    <span class="details">ID</span>
-                                    <input type="text" name="id" placeholder="" required>
-
-                                    <span class="details">Name</span>
-                                    <input type="text" name="name" placeholder="" required>
-
-                                    <span class="details">Father Name</span>
-                                    <input type="text" name="fname" placeholder="" required>
-
-                                    <span class="details">Grand father Name</span>
-                                    <input type="text" name="gname" placeholder="" required>
-                                    <div class="gender-details">
-                                        <span class="gender-title">Gender</span>
-                                        <select name="gender" placeholder="" required>
-                                            <option value="m">Male</option>
-                                            <option value="f">Female</option>
-
-                                        </select>
-
-
-                                        <br />
-
-                                    </div>
-                                </div>
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <div class="input-box">
-                                    <span class="details">Marriage Status</span>
-                                    <select name="married" placeholder="" required>
-                                        <option value=single>Single</option>
-                                        <option value=married>Married</option>
-                                        <option value=divorced>Divorced</option>
-                                    </select>
-                                    <span class="details">Disability</span>
-                                    <select name="disability" placeholder="" required>
-                                        <option value=yes>Yes</option>
-                                        <option value=no>No</option>
-
-                                    </select>
-
-
-                                    <span class="details">House number</span>
-                                    <div>
-                                        <select style="float:left;" name="house_no" placeholder="" required>
-                                            <?php 
+            <span class="details">Name</span>
+            <input type="text" name="name" placeholder="" required>
+          
+            <span class="details">Father Name</span>
+            <input type="text" name="fname" placeholder="" required>
+            
+            <span class="details">Grand father Name</span>
+            <input type="text" name="gname" placeholder="" required>
+            <div class="gender-details">
+                   <span class="gender-title">Gender</span> 
+                   <select name="gender" placeholder="" required>
+                    <option value="m">Male</option>
+                    <option value="f">Female</option>
+                    
+                </select>
+                    
+                    
+                    <br />
+                    
+                    </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <div class="input-box">
+          <span class="details" >Marriage Status</span>
+            <select name="married" placeholder="" required>
+                    <option value=single>Single</option>
+                    <option value=married>Married</option>
+                    <option value=divorced>Divorced</option>
+                </select>
+            <span class="details" >Disability</span>
+            <select name="disability" placeholder="" required>
+                    <option value=yes>Yes</option>
+                    <option value=no>No</option>
+                   
+                </select>
+            
+            
+            <span class="details">House number</span>
+            <div>
+            <select style="float:left;" name="house_no" placeholder="" required>
+                    <?php 
                     $sql="select house_id from house";
                     $query=mysqli_query($connection,$sql);
                     while($row=mysqli_fetch_assoc($query))
@@ -544,134 +513,131 @@ form .button input:hover {
                     }                
                     
                     ?>
+                    
+                  
+                </select>
+                <a class="newButton" style="display:inline-block;float:right;" href="cms.php?id=fill_house_form">+ New House</a></div>
+                <div></br></br></br></br></div>
+            <span class="details">Phone</span>
+            <input type="text" name="phone" placeholder="" required>
+            <span class="details">Email</span>
+            <input type="text" name="email" placeholder="" required>
+          </div>
+          
+          <div class="input-box">
+          <span class="details">Date of birth</span>
+            <input type="date" name="age" placeholder="" required>
+          <span class="details">Birth place</span>
+            <input type="text" name="birth_place" placeholder="" required>
+            <span class="details" >Job status</span>
+            <select name="job" placeholder="" required>
+                    <option value=unemployed>unemployed</option>
+                    <option value=governmental>governmental</option>
+                    <option value=non-governmental>non-governmental</option>
+                </select>
+            <span class="details" >Education Level</span>
+            <select name="education" placeholder="" required>
+                    <option value=illiterate>Illiterate</option>
+                    <option value=certificate>Certificate</option>
+                    <option value=degree>Degree</option>
+                    <option value=masters>Masters</option>
+                    <option value=phd>PHD</option>
+                </select>
+            
+            <span class="details" >Religion</span>
+            <select name="religion" placeholder="" required>
+                    <option value=orthodox>Orthodox</option>
+                    <option value=protestan>Protestant</option>
+                    <option value=muslim>Muslim</option>
+                    <option value=other>Others</option>
+                    
+                </select>
+          
+            
+          </div>
+          
+          <div class="input-box" style="margin-top:5px">
+            <h2>Primary contact</h2>
+            <span class="details">Name</span>
+            <input type="text" name="pname" placeholder="" required>
+            <span class="details">Phone</span>
+            <input type="text" name="pphone" placeholder="" required>
+            
+          </div>  
+          <div class="input-box" style="margin-top:5px">
+            <h2>Documents</h2>
+            <span class="details">Birth Certificate</span>
+            <input type="file" class="pdfs" name="birth_file" placeholder="" required>
+            <span class="details">Education Certificate</span>
+            <input type="file" class="pdfs" name="educ_file" placeholder="" required>
+            
+          </div>  
+        </div>
+        
+        <div class="button">
+          <input type="submit" name="register" value="REGISTER">
+        </div>
+      </form>
+    </div>
+  </div>
 
-
-                                        </select>
-                                        <a class="newButton" style="display:inline-block;float:right;"
-                                            href="cms.php?id=fill_house_form">+ New House</a>
-                                    </div>
-                                    <div></br></br></br></br></div>
-                                    <span class="details">Phone</span>
-                                    <input type="text" name="phone" placeholder="" required>
-                                    <span class="details">Email</span>
-                                    <input type="text" name="email" placeholder="" required>
-                                </div>
-
-                                <div class="input-box">
-                                    <span class="details">Date of birth</span>
-                                    <input type="date" name="age" placeholder="" required>
-                                    <span class="details">Birth place</span>
-                                    <input type="text" name="birth_place" placeholder="" required>
-                                    <span class="details">Job status</span>
-                                    <select name="job" placeholder="" required>
-                                        <option value=unemployed>unemployed</option>
-                                        <option value=governmental>governmental</option>
-                                        <option value=non-governmental>non-governmental</option>
-                                    </select>
-                                    <span class="details">Education Level</span>
-                                    <select name="education" placeholder="" required>
-                                        <option value=illiterate>Illiterate</option>
-                                        <option value=certificate>Certificate</option>
-                                        <option value=degree>Degree</option>
-                                        <option value=masters>Masters</option>
-                                        <option value=phd>PHD</option>
-                                    </select>
-
-                                    <span class="details">Religion</span>
-                                    <select name="religion" placeholder="" required>
-                                        <option value=orthodox>Orthodox</option>
-                                        <option value=protestan>Protestant</option>
-                                        <option value=muslim>Muslim</option>
-                                        <option value=other>Others</option>
-
-                                    </select>
-
-
-                                </div>
-
-                                <div class="input-box" style="margin-top:5px">
-                                    <h2>Primary contact</h2>
-                                    <span class="details">Name</span>
-                                    <input type="text" name="pname" placeholder="" required>
-                                    <span class="details">Phone</span>
-                                    <input type="text" name="pphone" placeholder="" required>
-
-                                </div>
-                                <div class="input-box" style="margin-top:5px">
-                                    <h2>Documents</h2>
-                                    <span class="details">Birth Certificate</span>
-                                    <input type="file" class="pdfs" name="birth_file" placeholder="" required>
-                                    <span class="details">Education Certificate</span>
-                                    <input type="file" class="pdfs" name="educ_file" placeholder="" required>
-
-                                </div>
-                            </div>
-
-                            <div class="button">
-                                <input type="submit" name="register" value="REGISTER">
-                            </div>
-                        </form>
                     </div>
-                </div>
+                <?php }?>
+                <?php if ( 'fill_house_form' == $id ) {?>
+                    <div class="addEnumerator">
 
-            </div>
-            <?php }?>
-            <?php if ( 'fill_house_form' == $id ) {?>
-            <div class="addEnumerator">
+  <div class="container2">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form onSubmit="return validate()" enctype="multipart/form-data" action="add.php?action=addHouse" method="POST">
+        <div class="user-details">
+        
+									
+									
+									
+        <div class="input-box">
+            <span class="details">House Number</span>
+            <input type="number" name="house_id" placeholder="" required>
+          
+            <span class="details">House document</span>
+            <input type="file" name="house_file" placeholder="" required>
+            <span class="details">Kebele</span>
+            <input type="text" name="kebele_id" placeholder="" required>
+            <span class="details" >Sub-city</span>
+            <select name="subcity" placeholder="" required>
+                    <option value="Tebase">Tebase Subcity</option>
+                    <option value="Minilik">Minilik Subcity</option>
+                    <option value="Tayitu">Tayitu Subcity</option>
+                    <option value="Atse zerayakob">Atse zerayakob Subcity</option>
+                    
+                   
+                </select>
+            
+            
+                   
+                   
+                    
+                    
+                    <br />
+                    
+                    
+          </div>
+          
+        </div>
+        <div class="button">
+          <input type="submit" name="register" value="REGISTER">
+        </div>
+      </form>
+    </div>
+  </div>
 
-                <div class="container2">
-                    <div class="title">Registration</div>
-                    <div class="content">
-                        <form onSubmit="return validate()" enctype="multipart/form-data"
-                            action="add.php?action=addHouse" method="POST">
-                            <div class="user-details">
-
-
-
-
-                                <div class="input-box">
-                                    <span class="details">House Number</span>
-                                    <input type="number" name="house_id" placeholder="" required>
-
-                                    <span class="details">House document</span>
-                                    <input type="file" name="house_file" placeholder="" required>
-                                    <span class="details">unit</span>
-                                    <input type="text" name="unit_id" placeholder="" required>
-                                    <span class="details">Sub-city</span>
-                                    <select name="substate" placeholder="" required>
-                                        <option value="Abuja">Abuja</option>
-                                        <option value="Lagos">Lagos</option>
-                                        <option value="Port-Harcourt">Port-Harcourt</option>
-                                        <option value="Enugu">Enugu</option>
-
-
-                                    </select>
-
-
-
-
-
-
-                                    <br />
-
-
-                                </div>
-
-                            </div>
-                            <div class="button">
-                                <input type="submit" name="register" value="REGISTER">
-                            </div>
-                        </form>
                     </div>
-                </div>
-
-            </div>
-            <?php }?>
-            <?php if ( 'view_report' == $id ) {
+                <?php }?>
+                <?php if ( 'view_report' == $id ) {
             include 'guest_dashboard.php';    
             }
                     ?>
-            <?php if ( 'report_table' == $id ) {
+                <?php if ( 'report_table' == $id ) {
             include 'report_table.php';    
             }
                 if ( 'message' == $id ) {
@@ -681,13 +647,13 @@ form .button input:hover {
             include 'send_message.php';    
             }
                     ?>
+               
 
+                
+            </div>
+            <!-- ---------------------- Enumerator ------------------------ -->
 
-
-        </div>
-        <!-- ---------------------- Enumerator ------------------------ -->
-
-        <?php
+            <?php
             if('feedback'== $id)
             {
                 include 'feedback.php';
@@ -708,129 +674,119 @@ form .button input:hover {
                     }
             }
             ?>
-        <!-- ---------------------- User Profile ------------------------ -->
-        <?php if ( 'userProfile' == $id ) {
+            <!-- ---------------------- User Profile ------------------------ -->
+            <?php if ( 'userProfile' == $id ) {
                     $query = "SELECT * FROM {$sessionRole}s WHERE {$sessionRole}_id='$sessionId'";
                     $result = mysqli_query( $connection, $query );
                     $data = mysqli_fetch_assoc( $result )
                 ?>
-        <div class="userProfile">
-            <div class="main__form myProfile">
-                <form action="cms.php">
-                    <div class="main__form--title myProfile__title text-center">My Profile</div>
-                    <div class="form-row text-center">
-                        <div class="col col-12 text-center pb-3">
-                            <img src="assets/img/<?php echo $data['avatar']; ?>" class="img-fluid rounded-circle"
-                                alt="">
-                        </div>
-                        <div class="col col-12">
-                            <h4><b>Full Name : </b><?php printf( "%s %s", $data['fname'], $data['lname'] );?></h4>
-                        </div>
-                        <div class="col col-12">
-                            <h4><b>Email : </b><?php printf( "%s", $data['email'] );?></h4>
-                        </div>
-                        <div class="col col-12">
-                            <h4><b>Phone : </b><?php printf( "%s", $data['phone'] );?></h4>
-                        </div>
-                        <input type="hidden" name="id" value="userProfileEdit">
-                        <div class="col col-12">
-                            <input class="updateMyProfile" type="submit" value="Update Profile">
-                        </div>
-                        <div class="col col-12">
-                            <input class="updateMyProfile" name="resset" type="submit" value="Resset Password">
-                        </div>
+                <div class="userProfile">
+                    <div class="main__form myProfile">
+                        <form  action="cms.php">
+                            <div class="main__form--title myProfile__title text-center">My Profile</div>
+                            <div class="form-row text-center">
+                                <div class="col col-12 text-center pb-3">
+                                    <img src="assets/img/<?php echo $data['avatar']; ?>" class="img-fluid rounded-circle" alt="">
+                                </div>
+                                <div class="col col-12">
+                                    <h4><b>Full Name : </b><?php printf( "%s %s", $data['fname'], $data['lname'] );?></h4>
+                                </div>
+                                <div class="col col-12">
+                                    <h4><b>Email : </b><?php printf( "%s", $data['email'] );?></h4>
+                                </div>
+                                <div class="col col-12">
+                                    <h4><b>Phone : </b><?php printf( "%s", $data['phone'] );?></h4>
+                                </div>
+                                <input type="hidden" name="id" value="userProfileEdit">
+                                <div class="col col-12">
+                                    <input class="updateMyProfile" type="submit" value="Update Profile">
+                                </div>                               
+                                <div class="col col-12">
+                                    <input class="updateMyProfile" name= "resset" type="submit" value="Resset Password">
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
-        </div>
-        <?php }?>
+                </div>
+            <?php }?>
 
-        <?php if ( 'userProfileEdit' == $id ) {
+            <?php if ( 'userProfileEdit' == $id ) {
                     $query = "SELECT * FROM {$sessionRole}s WHERE {$sessionRole}_id='$sessionId'";
                     $result = mysqli_query( $connection, $query );
                     $data = mysqli_fetch_assoc( $result )
                 ?>
 
 
-        <div class="userProfileEdit">
-            <div class="main__form">
-                <div class="main__form--title text-center">Update My Profile</div>
-                <form onSubmit="return validateform()" enctype="multipart/form-data" action="add.php" method="POST">
-                    <div class="form-row">
-                        <div class="col col-12 text-center pb-3">
-                            <img id="pimg" src="assets/img/<?php echo $data['avatar']; ?>"
-                                class="img-fluid rounded-circle" alt="">
-                            <i class="fas fa-pen pimgedit"></i>
-                            <input
-                                onchange="document.getElementById('pimg').src = window.URL.createObjectURL(this.files[0])"
-                                id="pimgi" style="display: none;" type="file" name="avatar">
-                        </div>
-                        <div class="col col-12">
-                            <?php if ( isset( $_REQUEST['avatarError'] ) ) {
+                <div class="userProfileEdit">
+                    <div class="main__form">
+                        <div class="main__form--title text-center">Update My Profile</div>
+                        <form onSubmit="return validateform()" enctype="multipart/form-data" action="add.php" method="POST">
+                            <div class="form-row">
+                                <div class="col col-12 text-center pb-3">
+                                    <img id="pimg" src="assets/img/<?php echo $data['avatar']; ?>" class="img-fluid rounded-circle" alt="">
+                                    <i class="fas fa-pen pimgedit"></i>
+                                    <input onchange="document.getElementById('pimg').src = window.URL.createObjectURL(this.files[0])" id="pimgi" style="display: none;" type="file" name="avatar">
+                                </div>
+                                <div class="col col-12">
+                                <?php if ( isset( $_REQUEST['avatarError'] ) ) {
                                             echo "<p style='color:red;' class='text-center'>Please make sure this file is jpg, png or jpeg</p>";
                                     }?>
-                        </div>
-                        <div class="col col-12">
-                            <label class="input">
-                                <i id="left" class="fas fa-user-circle"></i>
-                                <input type="text" name="fname" placeholder="First name"
-                                    value="<?php echo $data['fname']; ?>" required>
-                            </label>
-                        </div>
-                        <div class="col col-12">
-                            <label class="input">
-                                <i id="left" class="fas fa-user-circle"></i>
-                                <input type="text" name="lname" placeholder="Last Name"
-                                    value="<?php echo $data['lname']; ?>" required>
-                            </label>
-                        </div>
-                        <div class="col col-12">
-                            <label class="input">
-                                <i id="left" class="fas fa-envelope"></i>
-                                <input type="email" name="email" placeholder="Email"
-                                    value="<?php echo $data['email']; ?>" required>
-                            </label>
-                        </div>
-                        <div class="col col-12">
-                            <label class="input">
-                                <i id="left" class="fas fa-phone-alt"></i>
-                                <input type="number" name="phone" placeholder="Phone"
-                                    value="<?php echo $data['phone']; ?>" required>
-                            </label>
-                        </div>
-                        <div class="col col-12">
-                            <label class="input">
-                                <i id="left" class="fas fa-key"></i>
-                                <input id="pwdinput" type="password" name="oldPassword" placeholder="Old Password"
-                                    required>
-                                <i id="pwd" class="fas fa-eye right"></i>
-                            </label>
-                        </div>
-                        <div class="col col-12">
-                            <label class="input">
-                                <i id="left" class="fas fa-key"></i>
-                                <input id="pwdinput" type="password" name="newPassword" placeholder="New Password"
-                                    required>
-                                <?php $error= $_GET['error']??" ";
+                                </div>
+                                <div class="col col-12">
+                                    <label class="input">
+                                        <i id="left" class="fas fa-user-circle"></i>
+                                        <input type="text" name="fname" placeholder="First name" value="<?php echo $data['fname']; ?>" required>
+                                    </label>
+                                </div>
+                                <div class="col col-12">
+                                    <label class="input">
+                                        <i id="left" class="fas fa-user-circle"></i>
+                                        <input type="text" name="lname" placeholder="Last Name" value="<?php echo $data['lname']; ?>" required>
+                                    </label>
+                                </div>
+                                <div class="col col-12">
+                                    <label class="input">
+                                        <i id="left" class="fas fa-envelope"></i>
+                                        <input type="email" name="email" placeholder="Email" value="<?php echo $data['email']; ?>" required>
+                                    </label>
+                                </div>
+                                <div class="col col-12">
+                                    <label class="input">
+                                        <i id="left" class="fas fa-phone-alt"></i>
+                                        <input type="number" name="phone" placeholder="Phone" value="<?php echo $data['phone']; ?>" required>
+                                    </label>
+                                </div>
+                                <div class="col col-12">
+                                    <label class="input">
+                                        <i id="left" class="fas fa-key"></i>
+                                        <input id="pwdinput" type="password" name="oldPassword" placeholder="Old Password" required>
+                                        <i id="pwd" class="fas fa-eye right"></i>
+                                    </label>
+                                </div>
+                                <div class="col col-12">
+                                    <label class="input">
+                                        <i id="left" class="fas fa-key"></i>
+                                        <input id="pwdinput" type="password" name="newPassword" placeholder="New Password" required>
+                                        <?php $error= $_GET['error']??" ";
                                         if($error=='password'){?>
-
-                                <p>Wrong Old Password!!!</p>
-                                <?php } else{?>
-                                <p>Type Old Password if you don't want to change</p>
-                                <?php }?>
-                                <i id="pwd" class="fas fa-eye right"></i>
-                            </label>
-                        </div>
-                        <input type="hidden" name="action" value="updateProfile">
-                        <div class="col col-12">
-                            <input type="submit" value="Update">
-                        </div>
+                                        
+                                        <p>Wrong Old Password!!!</p>
+                                        <?php } else{?>
+                                         <p>Type Old Password if you don't want to change</p>
+                                         <?php }?>
+                                        <i id="pwd" class="fas fa-eye right"></i>
+                                    </label>
+                                </div>
+                                <input type="hidden" name="action" value="updateProfile">
+                                <div class="col col-12">
+                                    <input type="submit" value="Update">
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
-        </div>
-        <?php }?>
-        <!-- ---------------------- User Profile ------------------------ -->
+                </div>
+            <?php }?>
+            <!-- ---------------------- User Profile ------------------------ -->
 
         </div>
 
@@ -841,17 +797,17 @@ form .button input:hover {
 
 
     <!-- Optional JavaScript -->
-    <script src="./js/jquery-3.1.1.js"></script>
-    <script src="./js/sidebar.js"></script>
-    <script src="./js/bootstrap.js"></script>
-    <script src="./js/jquery.dataTables.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/form_validate.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('#table').DataTable();
-    });
-    </script>
+    <script src = "./js/jquery-3.1.1.js"></script>
+<script src = "./js/sidebar.js"></script>
+<script src = "./js/bootstrap.js"></script>
+<script src = "./js/jquery.dataTables.min.js"></script>
+<script src = "./js/script.js"></script>
+<script src = "./js/form_validate.js"></script>
+<script type = "text/javascript">
+	$(document).ready(function(){
+		$('#table').DataTable();
+	});
+</script>
 </body>
 
 </html>

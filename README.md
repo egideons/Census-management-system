@@ -1,15 +1,15 @@
-<h1>Web Based Census Management System</h1>
+<h1>Web based Census management system</h1>
 
-<b>Web: HTML, CSS, Javascript, PHP and mysql</b>
+<b>web: HTML, CSS, Javascript, PHP and mysql</b>
 
-<h3>It's a final year project which works on web and it has the following functionalities:</h3>
+<h3>it's a final year project which works on web and it has the following functionalities:</h3>
 <ul>
-<li>Admins can manage(create, delete and edit) users</li>
-<li>Admins, supervisors and enumerators can view reports and lists of person registered</li>
+<li>admins can manage(create, delete and edit) users</li>
+<li>admins, supervisors and enumerators can view reports and lists of person registered</li>
 <li>Supervisors can manage enumerators(edit activate and deactivate and delete) which they registered</li>
 <li>Supervisors can approve each records</li>
 <li>Enumerators can register</li>
-<li>All users can manage their own accounts</li>
+<li>all users can manage their own accounts</li>
 
 </ul>
 <h5>email: admin@gmail.com</h5>

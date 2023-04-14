@@ -43,7 +43,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`admin_id`, `fname`, `lname`, `email`, `phone`, `password`, `role`, `avatar`) VALUES
-('2', 'admin', 'admin', 'admin@gmail.com', '0917043076', '$2y$10$k/48IUOXEUtjggGrhJ/iQuS2oawM/GKugDA26RSqc51NxGJS7w5kO', 'admin', 'avatar.png');
+('2', 'Gideon', 'Chukwuoma', 'admin@gmail.com', '07039502751', '$2y$10$k/48IUOXEUtjggGrhJ/iQuS2oawM/GKugDA26RSqc51NxGJS7w5kO', 'admin', 'avatar.png');
 
 -- --------------------------------------------------------
 
@@ -58,7 +58,7 @@ CREATE TABLE `enumerators` (
   `lname` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(100) NOT NULL,
-  `unit` varchar(3) NOT NULL,
+  `kebele` varchar(3) NOT NULL,
   `password` varchar(100) NOT NULL,
   `role` varchar(100) NOT NULL DEFAULT 'enumerator',
   `avatar` varchar(255) NOT NULL DEFAULT 'avatar.png',
@@ -71,7 +71,7 @@ CREATE TABLE `enumerators` (
 -- Dumping data for table `enumerators`
 --
 
-INSERT INTO `enumerators` (`no`, `enumerator_id`, `fname`, `lname`, `email`, `phone`, `unit`, `password`, `role`, `avatar`, `status`, `address`, `supervisor_id`) VALUES
+INSERT INTO `enumerators` (`no`, `enumerator_id`, `fname`, `lname`, `email`, `phone`, `kebele`, `password`, `role`, `avatar`, `status`, `address`, `supervisor_id`) VALUES
 (1, 'enum_1', 'Gideon', 'Chukwuoma', 'gideon@gmail.com', '07039502751', '34', '$2y$10$Fd/31D/uOAUIaoYPIc9AteZuDPdX95qJcvJq28/lNSdSv4TSdZrFm', 'enumerator', 'avatar.png', b'1', 'Enugu', 'super333');
 
 -- --------------------------------------------------------
@@ -112,16 +112,17 @@ CREATE TABLE `house` (
   `id` int(11) NOT NULL,
   `house_id` int(11) NOT NULL,
   `house_doc` varchar(40) NOT NULL,
-  `substate` varchar(30) NOT NULL,
-  `unit_id` varchar(3) NOT NULL
+  `subcity` varchar(30) NOT NULL,
+  `kebele_id` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `house`
 --
 
-INSERT INTO `house` (`id`, `house_id`, `house_doc`, `substate`, `unit_id`) VALUES
-(1, 123, 'ItAssignment.docx', 'Enugu', '03');
+INSERT INTO `house` (`id`, `house_id`, `house_doc`, `subcity`, `kebele_id`) VALUES
+(1, 398, 'vlanStructure.docx', 'Enugu', '02'),
+(2, 367, 'Intel 8086.docx', 'Agbani', '01');
 
 -- --------------------------------------------------------
 
@@ -142,7 +143,8 @@ CREATE TABLE `notification` (
 --
 
 INSERT INTO `notification` (`not_id`, `sender`, `receiver`, `message`, `date`) VALUES
-(1, 'enum_14', 'super333', 'Hello, I think it is working', '2020-08-22 10:35:22');
+(3, 'kebe@gmail.com', '', 'i think it works', '2024-07-22 08:19:30'),
+(11, 'user@user.com', '', 'test for the contact page', '2010-08-22 03:07:27');
 
 -- --------------------------------------------------------
 
@@ -180,7 +182,7 @@ CREATE TABLE `person` (
 --
 
 INSERT INTO `person` (`person_id`, `name`, `fname`, `gfname`, `sex`, `age`, `house_id`, `married`, `disability`, `birth_place`, `religion`, `education`, `job`, `photo`, `pname`, `pphone`, `phone`, `email`, `birth_cert`, `educ_cert`, `isapproved`, `enum_id`) VALUES
-('1', 'egideons', 'Gideon', 'Chukwuoma', 'm', '2010-06-08', '398', 'single', 'no', 'Lagos', 'Christianity', 'educated', 'unemployed', 'Capture4.JPG', 'Zelalem Ashenafi', '0967410404', '0967410404', 'zolaashenafi48@gmail.com', 'Project_functionalities_done.docx', 'Project_functionalities_done.docx', b'1', 'enum12');
+('10', 'Hailu', 'Habte', 'Dagnu', 'm', '1960-08-09', '398', 'single', 'yes', 'Udi', 'orthodox', 'masters', 'unemployed', 'avatar.png', 'selemon hailu', '0987546231', '0987542658', 'tame@gmail.com', 'phsychoGroup.docx', 'google.txt', b'0', 'enum_04');
 
 -- --------------------------------------------------------
 
@@ -195,7 +197,7 @@ CREATE TABLE `supervisors` (
   `lname` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(100) NOT NULL,
-  `substate` varchar(30) NOT NULL,
+  `subcity` varchar(30) NOT NULL,
   `password` varchar(100) NOT NULL,
   `role` varchar(100) NOT NULL DEFAULT 'supervisor',
   `avatar` varchar(255) NOT NULL DEFAULT 'avatar.png',
@@ -207,8 +209,8 @@ CREATE TABLE `supervisors` (
 -- Dumping data for table `supervisors`
 --
 
-INSERT INTO `supervisors` (`no`, `supervisor_id`, `fname`, `lname`, `email`, `phone`, `substate`, `password`, `role`, `avatar`, `status`, `address`) VALUES
-(1, 'super333', 'Aster', 'Alema', 'cha@gmail.com', '09012365478', 'Enugu', '$2y$10$D/HCeZuXz/8L/eBahvAg0OPlAyQQi7Aq6ySWGF6ujbFmjL55BKeAq', 'supervisor', 'avatar.png', b'1', 'Enugu');
+INSERT INTO `supervisors` (`no`, `supervisor_id`, `fname`, `lname`, `email`, `phone`, `subcity`, `password`, `role`, `avatar`, `status`, `address`) VALUES
+(5, 'super_03', 'Tade', 'Meko', 'tade@gmail.com', '0985236541', 'Enugu', '$2y$10$EXYNDOnKmgcUp3YOg2GsaOOISWxAJSNdm3Swa7dpG42BhFjJTpOmy', 'supervisor', 'avatar.png', b'1', 'Enugu');
 
 --
 -- Indexes for dumped tables
