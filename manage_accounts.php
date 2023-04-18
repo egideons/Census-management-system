@@ -519,7 +519,7 @@
                                     <div class="col col-12">
                                         <label class="input">
                                             <i id="left" class="fas fa-circle"></i>
-                                            <input type="number" name="kebele" placeholder="kebele" required>
+                                            <input type="number" name="kebele" placeholder="Unit ID" required>
                                         </label>
                                     </div>
                                     <div class="col col-12">
